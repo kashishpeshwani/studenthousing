@@ -24,7 +24,7 @@ function LoginPage() {
       localStorage.setItem("user", JSON.stringify(user));
 
       // Redirect based on role
-      if (user.role === "admin") navigate("/admin");
+      if (user.role === "admin") navigate("/admin-dashboard");
       else if (user.role === "landlord") navigate("/host");
       else navigate("/dashboard");
     } catch (err) {

@@ -83,6 +83,9 @@ const PORT = process.env.PORT || 5000;
 //extra
 console.log("MONGO_URI =>", process.env.MONGO_URI);
 
+
+
+
 //extra
 mongoose
   .connect(process.env.MONGO_URI)
@@ -93,3 +96,7 @@ mongoose
     );
   })
   .catch((err) => console.error("❌  DB connection error:", err));
+
+
+const propertyRoutes = require("./routes/property");
+app.use("/api/properties", propertyRoutes);
